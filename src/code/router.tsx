@@ -13,13 +13,13 @@ const createRouter = () => {
       errorElement: <ErrorPage />,
       children: [
         {
-          path: "/main/test1",
+          path: "main",
           element: <Test1 />,
         },
-        // {
-        //   path: "/main/test2",
-        //   element: <Test2 />,
-        // },
+        {
+          path: "sub/:subpath",
+          element: <Test2 />,
+        },
       ],
     },
   ]);

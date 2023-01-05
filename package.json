@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "dark-tunnel的应用模板，用于快速生成sophic应用",
   "scripts": {
-    "start": "dark run -m Dev -h local.test.com -H -url /",
+    "start": "dark run -m Dev -h local.test.com -p 3001 -H -url /",
     "build": "dark run -m Pro -url /",
     "reinstall": "rm -rf node_modules && npm install --registry=https://registry.npmjs.org",
     "tsc": "tsc",

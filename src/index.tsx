@@ -7,15 +7,16 @@ import './index.less';
 
 const subApps = [
   {
-    name: 'sub',
+    name: 'sophicTemplate',
     entry: 'https://local.test.com:3002/',
     path: '/sub',
-    container: 'sub', // id
+    container: 'sophicTemplate', // id
   },
 ];
 export const sophic = new Sophic(Array.from(subApps));
+sophic.registerSubApps();
 
-
+console.log('sophic', sophic);
 
 // const customHistory = createBrowserHistory();
 // const SophicWrapper = props => {
