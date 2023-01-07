@@ -1,17 +1,18 @@
 import { Outlet } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import TemplateContent from './content';
 
 const SophicMasterTemplate = props => {
   const navigate = useNavigate();
+  const location = useLocation();
+  
   useEffect(() => {
-    navigate('/main', { replace: true });
-    props.appPubSub?.subscribe('sophicTemplate', params => {
-      console.log('params', params);
-    });
-    console.log('appPubSub', props.appPubSub);
-  }, []);
+    if(location.pathname === '/') {
+      navigate('/main', { replace: true });
+    }
+  }, [location])
+  
   return (
     <TemplateContent>
       <Outlet />

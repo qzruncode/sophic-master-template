@@ -13,28 +13,12 @@ const subApps = [
     container: 'sophicTemplate', // id
   },
 ];
-export const sophic = new Sophic(Array.from(subApps));
+const sophic = new Sophic(Array.from(subApps));
 sophic.registerSubApps();
-
-console.log('sophic', sophic);
-
-// const customHistory = createBrowserHistory();
-// const SophicWrapper = props => {
-//   React.useEffect(() => {
-//     const subApps = [
-//       {
-//         name: 'sub',
-//         entry: 'https://local.test.com:3002/',
-//         path: '/sub',
-//         container: 'sub', // id
-//       },
-//     ];
-//     const appPubSub = Sophic.registerSubApps(Array.from(subApps), customHistory);
-//     appPubSub.publish('dataCenter', { a: 'aa' });
-//   }, []);
-//   return props.children;
-// };
-
+sophic.appPubSub.publish('sophicTemplate', {
+  from: 'sophicMasterTemplate',
+  message: 'hahaha'
+})
 
 const root = ReactDOM.createRoot(document.getElementById('sophicMasterTemplate') as HTMLElement);
 root.render(
