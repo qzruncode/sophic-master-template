@@ -32,7 +32,7 @@ const Test = () => {
     const flag = subAppRoute.some(d => location.pathname.startsWith(d));
     flag && sophic.execSubApp();
     return () => {
-      flag && sophic.unmountSubApps();
+      flag && sophic.unmountSubApps(); // 必须要销毁
     };
   }, [location]);
 

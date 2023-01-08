@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ReactDOM from "react-dom/client";
+import ReactDOM from 'react-dom/client';
 import createRouter from './code/router';
 import { RouterProvider } from 'react-router-dom';
 import { Sophic } from 'sophic';
@@ -13,12 +13,12 @@ const subApps = [
     container: 'sophicTemplate', // id
   },
 ];
-const sophic = new Sophic(Array.from(subApps));
+const sophic = new Sophic(Array.from(subApps), 'sw');
 sophic.registerSubApps();
 sophic.appPubSub.publish('sophicTemplate', {
   from: 'sophicMasterTemplate',
-  message: 'hahaha'
-})
+  message: 'hahaha',
+});
 
 const root = ReactDOM.createRoot(document.getElementById('sophicMasterTemplate') as HTMLElement);
 root.render(
@@ -26,7 +26,3 @@ root.render(
     <RouterProvider router={createRouter()} />
   </React.StrictMode>
 );
-
-
-
-

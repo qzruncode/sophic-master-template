@@ -26,19 +26,11 @@
     "emitDecoratorMetadata": true,
   },
   "include": [
-    "./src/**/*",
-    "./node_modules/@antv/g6"
+    "./src/**/*"
   ],
   "exclude": [
     "node_modules",
     "build",
     "dist",
-    "scripts",
-    "acceptance-tests",
-    "webpack",
-    "jest",
-    "src/setupTests.ts",
-    "src/store",
-    "src/__tests__"
   ]
 }
