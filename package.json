@@ -1,6 +1,6 @@
 {
   "name": "sophic-master-template",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "dark-tunnel的应用模板，用于快速生成sophic应用",
   "scripts": {
     "start": "dark run -m Dev -h local.test.com -p 3001 -H -url /",
