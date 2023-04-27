@@ -28,7 +28,7 @@
     "@types/react-dom": "^18.0.10",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
-    "dark-tunnel": "^1.0.1",
+    "dark-tunnel": "^1.0.4",
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-react-app": "^6.0.0",
@@ -43,13 +43,13 @@
     "lines-and-columns": "^2.0.3",
     "lint-staged": "^11.0.1",
     "prettier": "^2.3.2",
-    "sophic-sw-webpack-plugin": "^1.0.1"
+    "sophic-sw-webpack-plugin": "^1.0.2"
   },
   "dependencies": {
     "antd": "^5.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.1",
-    "sophic": "^1.0.2"
+    "sophic": "^1.0.3"
   }
 }
